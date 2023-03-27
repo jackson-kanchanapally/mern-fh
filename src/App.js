@@ -1,11 +1,15 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
+import { ChakraProvider,Stack} from '@chakra-ui/react'
 import  Home  from './pages/Home';
 import {Navbar} from './components/Navbar';
+import Dtab from './components/Dtab';
+import CF from './components/CF';
 function App() {
   return (
-    <div className="App">
-   <BrowserRouter>
+    <ChakraProvider>
+      <Stack>
+   {/* <BrowserRouter>
    <Navbar/>
    <div>
     <Routes>
@@ -15,10 +19,14 @@ function App() {
       />
 
      
+   <Dtab/>
     </Routes>
    </div>
-   </BrowserRouter>
-    </div>
+   </BrowserRouter> */}
+   <Dtab/>
+   <CF/>
+   </Stack>
+   </ChakraProvider>
   );
 }
 
